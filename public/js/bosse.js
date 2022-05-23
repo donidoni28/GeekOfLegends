@@ -1,9 +1,13 @@
 class Boss {
-    constructor(nom,totalPv,pa){
+    constructor(nom,basePv,pa){
         this.nom = nom
-        this.totalPv = totalPv
+        this.basePv = basePv
         this.pa = pa
-        this.currentPv = this.totalPv
+        this.currentPv = this.basePv
+        this.type = 'boss'
+    }
+    setBossAttaque(perso){
+        perso.currentPv -= this.pa
     }
 }
 
